@@ -31,7 +31,7 @@ To run this application, you need to have Docker and Docker Compose installed.
 1. Clone the Repository
 
 
-git clone <your-repository-url>
+git clone <https://github.com/PseudoGod541/cat-dog-classifier>
 cd <your-project-directory>
 
 2. Place Model Files
