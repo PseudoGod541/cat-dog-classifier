@@ -1,0 +1,16 @@
+# .dockerignore
+
+# Ignore Python virtual environment
+.venv/
+
+# Ignore the huge dataset folder
+microsoft-catsvsdogs-dataset/
+
+# Ignore VS Code settings and Python cache
+.vscode/
+__pycache__/
+*.pyc
+
+# Ignore Git files
+.git/
+.gitignore

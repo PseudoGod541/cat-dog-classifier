@@ -1,0 +1,25 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  # The FastAPI Backend Service
+  api:
+    build: .
+    command: uvicorn app:app --host 0.0.0.0 --port 8000
+    volumes:
+      - ./best_model.h5:/app/best_model.h5
+      - ./labels.json:/app/labels.json
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  # The Streamlit Frontend Service
+  frontend:
+    build: .
+    command: streamlit run streamlit_app.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api  # This ensures the backend starts before the frontend
+    restart: unless-stopped

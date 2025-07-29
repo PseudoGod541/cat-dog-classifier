@@ -1,0 +1,12 @@
+# requirements.txt
+
+# For FastAPI Backend
+fastapi
+uvicorn
+tensorflow
+Pillow
+python-multipart
+
+# For Streamlit Frontend
+streamlit
+requests
